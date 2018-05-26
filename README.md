@@ -1,2 +1,2 @@
 # rubocop_image
-rubocopを実行するイメージ
+rubocop(+rubocop-rspec)を実行するイメージ
