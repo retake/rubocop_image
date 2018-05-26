@@ -2,6 +2,12 @@ FROM ruby:2.3
 
 MAINTAINER "Matsuura Keita<retake272@gmail.com>"
 
+# locale
+RUN apt-get update
+RUN apt-get install locales -y
+RUN echo "ja_JP UTF-8" > /etc/locale.gen
+RUN locale-gen
+
 ARG rubocop_version=0.53.0
 ARG rubocop_rspec_version=1.25.1
 RUN gem install rubocop -v ${rubocop_version}
